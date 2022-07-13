@@ -1,0 +1,21 @@
+{
+  "name": "zndomain/entity-manager",
+  "type": "extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zn Developer",
+      "email": "zndev@ya.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    
+  },
+  "autoload": {
+    "psr-4": {
+      "ZnDomain\\EntityManager\\": "src",
+      "ZnDomain\\EntityManager\\Tests\\": "tests"
+    }
+  }
+}
