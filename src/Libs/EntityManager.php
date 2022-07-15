@@ -8,17 +8,17 @@ use ZnCore\Collection\Libs\Collection;
 use ZnCore\Container\Interfaces\ContainerConfiguratorInterface;
 use ZnCore\Contract\Common\Exceptions\InvalidConfigException;
 use ZnCore\Contract\Common\Exceptions\InvalidMethodParameterException;
-use ZnCore\Entity\Exceptions\AlreadyExistsException;
-use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnCore\Entity\Helpers\EntityHelper;
-use ZnCore\Entity\Interfaces\EntityIdInterface;
-use ZnCore\Entity\Interfaces\UniqueInterface;
+use ZnDomain\Entity\Exceptions\AlreadyExistsException;
+use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnDomain\Entity\Helpers\EntityHelper;
+use ZnDomain\Entity\Interfaces\EntityIdInterface;
+use ZnDomain\Entity\Interfaces\UniqueInterface;
 use ZnDomain\EntityManager\Interfaces\EntityManagerConfiguratorInterface;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnDomain\EntityManager\Interfaces\OrmInterface;
 use ZnDomain\Repository\Interfaces\CrudRepositoryInterface;
 use ZnDomain\Repository\Interfaces\RepositoryInterface;
-use ZnCore\Validation\Exceptions\UnprocessibleEntityException;
+use ZnDomain\Validator\Exceptions\UnprocessibleEntityException;
 use ZnLib\I18Next\Facades\I18Next;
 
 class EntityManager implements EntityManagerInterface
