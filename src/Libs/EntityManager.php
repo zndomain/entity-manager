@@ -3,6 +3,7 @@
 namespace ZnDomain\EntityManager\Libs;
 
 use Psr\Container\ContainerInterface;
+use ZnCore\Code\Helpers\PropertyHelper;
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Collection\Libs\Collection;
 use ZnCore\Container\Interfaces\ContainerConfiguratorInterface;
@@ -151,7 +152,7 @@ class EntityManager implements EntityManagerInterface
                 $isMach = true;
                 $fields = [];
                 foreach ($group as $fieldName) {
-                    if (EntityHelper::getValue($entity, $fieldName) === null || EntityHelper::getValue($uniqueEntity, $fieldName) != EntityHelper::getValue($entity, $fieldName)) {
+                    if (PropertyHelper::getValue($entity, $fieldName) === null || PropertyHelper::getValue($uniqueEntity, $fieldName) != PropertyHelper::getValue($entity, $fieldName)) {
                         $isMach = false;
                         break;
                     } else {
@@ -210,7 +211,7 @@ class EntityManager implements EntityManagerInterface
     {
         $entityInstance = $this->container->get($entityClassName);
         if ($attributes) {
-            EntityHelper::setAttributes($entityInstance, $attributes);
+            PropertyHelper::setAttributes($entityInstance, $attributes);
         }
         return $entityInstance;
     }
